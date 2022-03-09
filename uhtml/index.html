@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ADA Book Template v1.0</title>
+    <link type="text/css" rel="stylesheet" href="css/book.css" />
+    <style>
+      a.fn {
+        -adapt-template: url(data:application/xml,%3Chtml%20xmlns=%22http://www.w3.org/1999/xhtml%22%20xmlns:s=%22http://www.pyroxy.com/ns/shadow%22%3E%3Chead%3E%3Cstyle%3E.footnote-content%7Bfloat:footnote%7D%3C/style%3E%3C/head%3E%3Cbody%3E%3Cs:template%20id=%22footnote%22%3E%3Cs:content/%3E%3Cs:include%20class=%22footnote-content%22/%3E%3C/s:template%3E%3C/body%3E%3C/html%3E#footnote);
+        text-decoration: none;
+        color: inherit;
+        vertical-align: baseline;
+        font-size: 70%;
+        position: relative;
+        top: -0.3em;
+      }
+      body {
+        background-color: white;
+      }
+      section[role=doc-footnote] .footnote-counter:after {
+        content: ". ";
+      }
+      section.fnlist {
+        display: none;
+      }
+      section:footnote-content {
+        display: block;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+      }
+      .table-of-contents a {
+        display: inline-flex;
+        width: 100%;
+        text-decoration: none;
+        color: currentColor;
+        break-inside: avoid;
+        align-items: baseline;
+      }
+      .table-of-contents a::before {
+        margin-left: 1px;
+        margin-right: 1px;
+        border-bottom: solid 1px lightgray;
+        content: "";
+        order: 1;
+        flex: auto;
+      }
+      .table-of-contents a::after {
+        text-align: right;
+        content: target-counter(attr(href, url), page);
+        align-self: flex-end;
+        flex: none;
+        order: 2;
+      }
+      @page {
+        size: 6in 9in;
+        @top-center {
+          content: env(doc-title);
+        }
+        @bottom-center {
+          content: counter(page);
+        }
+      }
+      @page :first {
+        @bottom-center {
+          content: normal;
+        }
+        @top-center {
+          content: normal;
+        }
+      }
+      figure img {
+        max-width: 100%;
+      }
+      .article-title {
+        page-break-before: right;
+      }
+      h1.part {
+        page-break-before: right;
+      }
+      .copyrightpage {
+        page-break-before: left;
+      }
+      .tocpage {
+        page-break-before: right;
+      }
+      .booktitle {
+        text-align: center;
+      }
+    </style>
+    <link type="text/css" rel="stylesheet" href="css/ada001.css" />
+  </head>
+  <body class="user-contents">
+    <div class="titlepage frontmatter">
+      <h1 class="booktitle">ADA Book Template v1.0</h1>
+      <h2 class="booksubtitle">For use in outputting books</h2>
+      <h3 class="bookauthor">by The Author</h3>
+    </div>
+    <div class="copyrightpage frontmatter">
+      <p>Published by: The Publisher</p>
+      <p>Last Updated: 2022-03-09</p>
+      <p>Created: 2022-03-08</p>
+      <p>Language: English</p>
+      <p>Created by: Simon Worthington</p>
+    </div>
+    <div class="tocpage frontmatter">
+      <nav role="doc-toc">
+        <ol>
+          <li>
+            <a href="#_1_0">
+              Front Matter
+            </a>
+            <ol>
+              <li>
+                <a href="#_1_0">
+                  About the Book
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H353005">
+                      Title page
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H5488342">
+                      Copyright page
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H8928019">
+                      Description
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H344358">
+                      Contributors
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H3962672">
+                      Acknowledgements
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H4408518">
+                      Foreword
+                    </a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#_2_0">
+              Chapters
+            </a>
+            <ol>
+              <li>
+                <a href="#_2_0">
+                  Chapter 1
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H5353869">
+                      Text, images, references, and footnotes
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H6448135">
+                          Image
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H153323">
+                          References
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H5724220">
+                          Footnotes
+                        </a>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a href="#_2_1">
+                      Bibliography
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <a href="#_3_0">
+                  Chapter 2
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H3821851">
+                      Tables and calculations
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H3716596">
+                          Tables
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H8566701">
+                          Calculations
+                        </a>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <a href="#_4_0">
+                  Chapter 3
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H3039027">
+                      Lists, and headers and styles
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H5537956">
+                          Lists
+                        </a>
+                        <ol>
+                          <li>
+                            <a href="#H4082896">
+                              Ordered list
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H4354781">
+                              Ordered list indented
+                            </a>
+                          </li>
+                        </ol>
+                      </li>
+                      <li>
+                        <a href="#H1193054">
+                          Unordered list
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H2723379">
+                          Headers and styles
+                        </a>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a href="#H5078208">
+                      Header 1
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H7613580">
+                          Header 2
+                        </a>
+                        <ol>
+                          <li>
+                            <a href="#H7133996">
+                              Header 3
+                            </a>
+                            <ol>
+                              <li>
+                                <a href="#H9722296">
+                                  Header 4
+                                </a>
+                                <ol>
+                                  <li>
+                                    <a href="#H7389617">
+                                      Header 5
+                                    </a>
+                                    <ol>
+                                      <li>
+                                        <a href="#H1367103">
+                                          Header 6
+                                        </a>
+                                      </li>
+                                    </ol>
+                                  </li>
+                                </ol>
+                              </li>
+                            </ol>
+                          </li>
+                          <li>
+                            <a href="#H7176378">
+                              Blockquote
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H6762577">
+                              Bold and italic
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H8807675">
+                              Horizontal line
+                            </a>
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#_5_0">
+              Back Matter
+            </a>
+            <ol>
+              <li>
+                <a href="#_5_0">
+                  Appendix
+                </a>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <h1 class="part">Front Matter</h1>
+    <div class="article-part article-title" id="_1_0">About the Book</div>
+    <div class="article-part article-richtext article-body">
+      <h2 id="H353005">Title page</h2>
+      <p>Title</p>
+      <p>Subtitle</p>
+      <p>Edited by the editor</p>
+      <p>Version X.X, 20XX</p>
+      <h2 id="H5488342">Copyright page</h2>
+      <p>Title<br>Series<br>ISBN 978- <br>DOI <br>Date 20XX<br>Place </p>
+      <p>Publisher<br>Address<br>City</p>
+      <p>© 20XX the authors. Creative Commons Attribution ShareAlike 4.0 International (CC BY-SA 4.0) <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">https://creativecommons.org/licenses/by-sa/4.0/deed.de</a><br>Printed by</p>
+      <h2 id="H8928019">Description</h2>
+      <p>Proin semper interdum rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent convallis hendrerit semper. Fusce consectetur elit non ipsum egestas, sed bibendum tellus euismod. Ut viverra massa vel magna tempor imperdiet id et enim. Integer rhoncus eleifend facilisis. Nunc laoreet sodales mauris, sit amet fermentum ex tempus egestas. Fusce est est, vestibulum et commodo vel, malesuada id dui. Aliquam erat volutpat. Fusce mattis id nunc eget pharetra. Aenean vitae viverra dolor. Donec lacinia eget ante quis facilisis. Quisque justo lacus, dignissim in erat vel, eleifend semper quam. Etiam pretium nisl sit amet est auctor, in euismod ipsum volutpat.</p>
+      <h2 id="H344358">Contributors</h2>
+      <p><strong>Author 1<br></strong>Bio</p>
+      <p><strong>Editor<br></strong>Bio</p>
+      <h2 id="H3962672">Acknowledgements</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus placerat risus, ut sagittis magna. Aliquam vehicula lacinia nisi, rutrum condimentum lacus mattis tincidunt. Quisque ullamcorper orci quis sem tempus suscipit. Etiam et semper eros, a eleifend risus. Vestibulum convallis orci purus, et feugiat ipsum facilisis rutrum. Nullam justo lorem, fermentum ultrices lorem sed, faucibus imperdiet est. Nam ut porta purus. Curabitur vel felis placerat, porttitor nibh quis, facilisis mi. Morbi in fermentum nisi, eget iaculis nisl. Praesent posuere non lectus nec vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean blandit lectus et nisl eleifend, ornare ornare sem efficitur. Nullam quis nisl at risus luctus imperdiet. Maecenas aliquam est a nulla fermentum convallis.</p>
+      <h2 id="H4408518">Foreword</h2>
+      <p>Aliquam condimentum velit sed vestibulum iaculis. Sed neque nunc, sagittis eu semper eget, vehicula a orci. Mauris ultricies diam leo, id scelerisque ante facilisis vel. Curabitur ut ultricies eros. Nam diam sapien, gravida eget cursus non, consequat a elit. Fusce non pulvinar magna, vel dapibus felis. Aliquam sem nisi, efficitur ut maximus vitae, condimentum in lorem.</p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <h1 class="part">Chapters</h1>
+    <div class="article-part article-title" id="_2_0">Chapter 1</div>
+    <div class="article-part article-richtext article-body">
+      <h2 id="H5353869">Text, images, references, and footnotes</h2>
+      <h3 id="H6448135">Image</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus placerat risus, ut sagittis magna. Aliquam vehicula lacinia nisi, rutrum condimentum lacus mattis tincidunt. Quisque ullamcorper orci quis sem tempus suscipit. Etiam et semper eros, a eleifend risus. Vestibulum convallis orci purus, et feugiat ipsum facilisis rutrum. Nullam justo lorem, fermentum ultrices lorem sed, faucibus imperdiet est. Nam ut porta purus. Curabitur vel felis placerat, porttitor nibh quis, facilisis mi. Morbi in fermentum nisi, eget iaculis nisl. Praesent posuere non lectus nec vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean blandit lectus et nisl eleifend, ornare ornare sem efficitur. Nullam quis nisl at risus luctus imperdiet. Maecenas aliquam est a nulla fermentum convallis.</p>
+      <figure id="F64353661" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="figure"><img src="images/e5c5f202-b1e2-4b15-98f9-a9082d225a6b.jpg">
+        <figcaption><span class="label-counter" data-book-counter="1" data-chapter-counter="1">Figure</span><span class="text"><a href="https://en.wikipedia.org/wiki/March_for_Science" title="w:March for Science">March for Science</a>&nbsp;in San Francisco, California. 2017. See: <a href="https://commons.wikimedia.org/wiki/File:Citation_needed_-_March_for_Science.jpg" title="https://commons.wikimedia.org/wiki/File:Citation_needed_-_March_for_Science.jpg">https://commons.wikimedia.org/wiki/File:Citation_needed_-_March_for_Science.jpg</a></span></figcaption>
+      </figure>
+      <h3 id="H153323">References</h3>
+      <p>Proin semper interdum rutrum. <span class="citation">(Worthington 2013, 2013)</span> Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent convallis hendrerit semper. Fusce consectetur elit non ipsum egestas, sed bibendum tellus euismod. <span class="citation">(Technische Universität München 2021)</span> Ut viverra massa vel magna tempor imperdiet id et enim. Integer rhoncus eleifend facilisis. Nunc laoreet sodales mauris, sit amet fermentum ex tempus egestas. Fusce est est, vestibulum et commodo vel, malesuada id dui. <span class="citation">(Furter, Worthington, and Fabagit 2015)</span> Aliquam erat volutpat. Fusce mattis id nunc eget pharetra. Aenean vitae viverra dolor. Donec lacinia eget ante quis facilisis. Quisque justo lacus, dignissim in erat vel, eleifend semper quam. Etiam pretium nisl sit amet est auctor, in euismod ipsum volutpat. <span class="citation">(Worthington 2015)</span></p>
+      <h3 id="H5724220">Footnotes</h3>
+      <p>Aliquam condimentum velit sed vestibulum iaculis.<a href="#fn1" class="fn"><span class="footnote-counter" data-chapter-counter="1" data-book-counter="1"></span></a> Sed neque nunc, sagittis eu semper eget, vehicula a orci. Mauris ultricies diam leo, id scelerisque ante facilisis vel. Curabitur ut ultricies eros.<a href="#fn2" class="fn"><span class="footnote-counter" data-chapter-counter="2" data-book-counter="2"></span></a> Nam diam sapien, gravida eget cursus non, consequat a elit. Fusce non pulvinar magna, vel dapibus felis. Aliquam sem nisi, efficitur ut maximus vitae, condimentum in lorem.<a href="#fn3" class="fn"><span class="footnote-counter" data-chapter-counter="3" data-book-counter="3"></span></a> </p>
+      <p>Aliquam erat volutpat. Maecenas iaculis lorem nec elit ornare interdum. Integer faucibus a augue a ullamcorper. Aenean non ligula id nulla faucibus rutrum ut et eros. Aliquam a tempus ex. Vivamus sit amet sapien gravida, pretium quam nec, scelerisque tellus. Donec malesuada augue lorem, quis hendrerit risus luctus vel. Aenean sollicitudin tortor vel ex hendrerit, ac aliquam ipsum aliquet. Sed id velit nec magna fermentum pellentesque. Integer lorem arcu, malesuada eu iaculis id, varius eu tortor. Praesent orci orci, varius efficitur lacinia id, ultrices non diam. Etiam congue, diam id bibendum tincidunt, ante elit lobortis nibh, et bibendum enim velit eu urna. Nam vitae turpis sit amet mauris sagittis mattis. Nullam mattis pulvinar posuere. Quisque tincidunt lacus nibh, id rutrum est tempor a.</p>
+    </div>
+    <section class="fnlist" role="doc-footnotes">
+      <section id="fn1" role="doc-footnote" data-chapter-counter="1" data-book-counter="1">
+        <p><span class="footnote-counter" data-chapter-counter="1" data-book-counter="1"></span>Worthington, Simon. ‘Simon Worthington › Hybrid Publishing Lab Notepad’. Blog. <em>Hybrid Publishing Lab Notepad</em> (blog), 2013.</p>
+      </section>
+      <section id="fn2" role="doc-footnote" data-chapter-counter="2" data-book-counter="2">
+        <p><span class="footnote-counter" data-chapter-counter="2" data-book-counter="2"></span>Worthington, Simon. <em>Book to the Future - a Book Liberation Manifesto</em>. London: OpenMute Press, 2015. </p>
+      </section>
+      <section id="fn3" role="doc-footnote" data-chapter-counter="3" data-book-counter="3">
+        <p><span class="footnote-counter" data-chapter-counter="3" data-book-counter="3"></span>Worthington, Simon. ‘Collaborative Libraries - Read Me’. Github Repository. Collaborative Libraries, 2015. <a href="https://github.com/consortium/Collaborative-Libraries">https://github.com/consortium/Collaborative-Libraries</a>.</p>
+      </section>
+    </section>
+    <h1 class="article-bibliography-header" id="_2_1">Bibliography</h1>
+    <div class="csl-bib-body">
+      <div class="csl-entry">Furter, Simon Worthington, and Fabagit. 2015. “Hybrid-Lecture-Player-Mcluhan: Hlp-M.” doi:10.5281/ZENODO.19331.</div>
+      <div class="csl-entry">Technische Universität München. 2021. “Fidus Writer at TUM.” Accessed March 23. https://wiki.tum.de/display/FidusWriter.</div>
+      <div class="csl-entry">Worthington, Simon. 2013. “Dynamic Publishing - New Platforms, New Readers!” doi:10.5281/ZENODO.610760.</div>
+      <div class="csl-entry">———. 2015. “Publication-Taxonomy: A Publication Taxonomy.” doi:10.5281/ZENODO.19731.</div>
+    </div>
+    <div class="article-part article-title" id="_3_0">Chapter 2</div>
+    <div class="article-part article-richtext article-body">
+      <h2 id="H3821851">Tables and calculations</h2>
+      <h3 id="H3716596">Tables</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus placerat risus, ut sagittis magna. Aliquam vehicula lacinia nisi, rutrum condimentum lacus mattis tincidunt. Quisque ullamcorper orci quis sem tempus suscipit. Etiam et semper eros, a eleifend risus. Vestibulum convallis orci purus, et feugiat ipsum facilisis rutrum. Nullam justo lorem, fermentum ultrices lorem sed, faucibus imperdiet est. Nam ut porta purus. Curabitur vel felis placerat, porttitor nibh quis, facilisis mi. Morbi in fermentum nisi, eget iaculis nisl. Praesent posuere non lectus nec vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean blandit lectus et nisl eleifend, ornare ornare sem efficitur. Nullam quis nisl at risus luctus imperdiet. Maecenas aliquam est a nulla fermentum convallis.</p>
+      <table id="T11533241" class="table-100 table-center table-auto" data-width="100" data-aligned="center" data-layout="auto" data-category="table">
+        <caption><span class="label-counter" data-book-counter="1" data-chapter-counter="1">Table</span><span class="text">About the table</span></caption>
+        <tbody>
+          <tr>
+            <th>
+              <p>Header 1</p>
+            </th>
+            <th>
+              <p>Header 2</p>
+            </th>
+            <th>
+              <p>Header 3</p>
+            </th>
+            <th>
+              <p>Header 4</p>
+            </th>
+            <th>
+              <p>Header 5</p>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <p>Row 1</p>
+            </th>
+            <td>
+              <p>1</p>
+            </td>
+            <td>
+              <p>2</p>
+            </td>
+            <td>
+              <p>3</p>
+            </td>
+            <td>
+              <p>4</p>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <p>Row 2</p>
+            </th>
+            <td>
+              <p>5</p>
+            </td>
+            <td>
+              <p>6</p>
+            </td>
+            <td>
+              <p>7</p>
+            </td>
+            <td>
+              <p>8</p>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <p>Row 3</p>
+            </th>
+            <td>
+              <p>9</p>
+            </td>
+            <td>
+              <p>10</p>
+            </td>
+            <td>
+              <p>11</p>
+            </td>
+            <td>
+              <p>12</p>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <p>Row 4</p>
+            </th>
+            <td>
+              <p>13</p>
+            </td>
+            <td>
+              <p>14</p>
+            </td>
+            <td>
+              <p>15</p>
+            </td>
+            <td>
+              <p>16</p>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <p>Row 5</p>
+            </th>
+            <td>
+              <p>17</p>
+            </td>
+            <td>
+              <p>18</p>
+            </td>
+            <td>
+              <p>19</p>
+            </td>
+            <td>
+              <p>20</p>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <p>Row 6</p>
+            </th>
+            <td>
+              <p>21</p>
+            </td>
+            <td>
+              <p>22</p>
+            </td>
+            <td>
+              <p>23</p>
+            </td>
+            <td>
+              <p>24</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Proin semper interdum rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent convallis hendrerit semper. Fusce consectetur elit non ipsum egestas, sed bibendum tellus euismod. Ut viverra massa vel magna tempor imperdiet id et enim. Integer rhoncus eleifend facilisis. Nunc laoreet sodales mauris, sit amet fermentum ex tempus egestas. Fusce est est, vestibulum et commodo vel, malesuada id dui. Aliquam erat volutpat. Fusce mattis id nunc eget pharetra. Aenean vitae viverra dolor. Donec lacinia eget ante quis facilisis. Quisque justo lacus, dignissim in erat vel, eleifend semper quam. Etiam pretium nisl sit amet est auctor, in euismod ipsum volutpat.</p>
+      <h3 id="H8566701">Calculations</h3>
+      <p>Aliquam condimentum velit sed vestibulum iaculis. Sed neque nunc, sagittis eu semper eget, vehicula a orci. Mauris ultricies diam leo, id scelerisque ante facilisis vel. Curabitur ut ultricies eros. Nam diam sapien, gravida eget cursus non, consequat a elit. Fusce non pulvinar magna, vel dapibus felis. Aliquam sem nisi, efficitur ut maximus vitae, condimentum in lorem.</p>
+      <p><span data-equation="x^2-10x+y^2-20y=-125whatisx+y=?" class="equation" contenteditable="false"><span class="ML__mathlive" style="margin-left:0.06em;"><span class="ML__strut" style="height:0.89em;"></span><span class="ML__strut--bottom" style="height:1.32em;vertical-align:-0.43em;"></span><span class="ML__base"><span class="ML__mathit">x</span><span><span class="msubsup"><span class="vlist"><span style="top:-0.43em;margin-right:0.05em;"><span class="reset-textstyle scriptstyle"><span class="ML__cmr">2</span></span></span></span></span></span><span class="ML__cmr" style="margin-left:0.23em;">−</span><span class="ML__cmr" style="margin-left:0.23em;">10</span><span class="ML__mathit">x</span><span class="ML__cmr" style="margin-left:0.23em;">+</span><span class="ML__mathit" style="margin-right:0.04em;margin-left:0.23em;">y</span><span><span class="msubsup"><span class="vlist"><span style="top:-0.43em;margin-right:0.05em;"><span class="reset-textstyle scriptstyle"><span class="ML__cmr">2</span></span></span></span></span></span><span class="ML__cmr" style="margin-left:0.23em;">−</span><span class="ML__cmr" style="margin-left:0.23em;">20</span><span class="ML__mathit" style="margin-right:0.04em;">y</span><span class="ML__cmr" style="margin-left:0.28em;">=</span><span class="ML__cmr" style="margin-left:0.28em;">−</span><span class="ML__cmr">125</span><span class="ML__mathit" style="margin-right:0.03em;">w</span><span class="ML__mathit">hatisx</span><span class="ML__cmr" style="margin-left:0.23em;">+</span><span class="ML__mathit" style="margin-right:0.04em;margin-left:0.23em;">y</span><span class="ML__cmr" style="margin-left:0.28em;">=</span><span class="ML__cmr" style="margin-left:0.28em;">?</span></span></span></span></p>
+      <p><span data-equation="\exponentialE=^2\int ^{\infty}_0\int ^{\infty}_0\int ^{\infty}_0\sqrt[]{4\textcolor{#CC2428}{\mleft(x\mright)}}" class="equation" contenteditable="false"><span class="ML__mathlive" style="margin-left:0.06em;"><span class="ML__strut" style="height:0.9em;"></span><span class="ML__strut--bottom" style="height:1.33em;vertical-align:-0.43em;"></span><span class="ML__base"><span><span class="ML__cmr">e</span></span><span class="ML__cmr" style="margin-left:0.28em;">=</span><span style="margin-left:0.28em;"><span class="msubsup"><span class="vlist"><span style="top:-0.43em;margin-right:0.05em;"><span class="reset-textstyle scriptstyle"><span class="ML__cmr">2</span></span></span></span></span></span><span style="margin-left:0.17em;"><span class="op-symbol small-op" style="margin-right:0.2em;top:0em;">∫</span><span class="msubsup"><span class="vlist"><span style="top:0.38em;margin-left:-0.19em;"><span class="reset-textstyle scriptstyle"><span class="ML__cmr">0</span></span></span><span style="top:-0.45em;"><span class="reset-textstyle scriptstyle"><span class="ML__cmr">∞</span></span></span></span></span></span><span style="margin-left:0.17em;"><span class="op-symbol small-op" style="margin-right:0.2em;top:0em;">∫</span><span class="msubsup"><span class="vlist"><span style="top:0.38em;margin-left:-0.19em;"><span class="reset-textstyle scriptstyle"><span class="ML__cmr">0</span></span></span><span style="top:-0.45em;"><span class="reset-textstyle scriptstyle"><span class="ML__cmr">∞</span></span></span></span></span></span><span style="margin-left:0.17em;"><span class="op-symbol small-op" style="margin-right:0.2em;top:0em;">∫</span><span class="msubsup"><span class="vlist"><span style="top:0.38em;margin-left:-0.19em;"><span class="reset-textstyle scriptstyle"><span class="ML__cmr">0</span></span></span><span style="top:-0.45em;"><span class="reset-textstyle scriptstyle"><span class="ML__cmr">∞</span></span></span></span></span></span><span class="sqrt" style="margin-left:0.17em;"><span class="root"><span class="vlist"><span style="top:-0.35em;"><span class="reset-textstyle scriptscriptstyle"></span></span></span></span><span class="sqrt-sign" style="top:-0.04em;"><span class="style-wrap"><span class="delimsizing size1">√</span></span></span><span class="vlist"><span><span><span class="ML__cmr">4</span><span class="ML__small-delim ML__open style-wrap" style="color:#cc2428;"><span>(</span></span><span class="ML__mathit" style="color:#cc2428;">x</span><span class="ML__small-delim ML__close style-wrap" style="color:#cc2428;"><span>)</span></span></span></span><span style="top:-0.85em;"><span class="sqrt-line"></span></span></span></span></span></span></span></p><p>Aliquam erat volutpat. Maecenas iaculis lorem nec elit ornare interdum. Integer faucibus a augue a ullamcorper. Aenean non ligula id nulla faucibus rutrum ut et eros. Aliquam a tempus ex. Vivamus sit amet sapien gravida, pretium quam nec, scelerisque tellus. Donec malesuada augue lorem, quis hendrerit risus luctus vel. Aenean sollicitudin tortor vel ex hendrerit, ac aliquam ipsum aliquet. Sed id velit nec magna fermentum pellentesque. Integer lorem arcu, malesuada eu iaculis id, varius eu tortor. Praesent orci orci, varius efficitur lacinia id, ultrices non diam. Etiam congue, diam id bibendum tincidunt, ante elit lobortis nibh, et bibendum enim velit eu urna. Nam vitae turpis sit amet mauris sagittis mattis. Nullam mattis pulvinar posuere. Quisque tincidunt lacus nibh, id rutrum est tempor a.</p><p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla a hendrerit diam. Morbi nec ipsum eget ligula consectetur mollis. Quisque vulputate iaculis elementum. Aliquam pulvinar, quam id pellentesque facilisis, massa lorem accumsan urna, a rhoncus nibh mi ac ex. Donec nec sollicitudin risus. Aenean lectus augue, lobortis id scelerisque sit amet, ultrices quis arcu. Nam et eros gravida, consequat felis eu, lacinia arcu. Nam fermentum convallis risus, ut accumsan nisi viverra eu.</p></div><section class="fnlist" role="doc-footnotes"></section><div class="article-part article-title" id="_4_0">Chapter 3</div>
+<div class="article-part article-richtext article-body">
+  <h2 id="H3039027">Lists, and headers and styles</h2>
+  <h3 id="H5537956">Lists</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus placerat risus, ut sagittis magna. Aliquam vehicula lacinia nisi, rutrum condimentum lacus mattis tincidunt. Quisque ullamcorper orci quis sem tempus suscipit. Etiam et semper eros, a eleifend risus. Vestibulum convallis orci purus, et feugiat ipsum facilisis rutrum. Nullam justo lorem, fermentum ultrices lorem sed, faucibus imperdiet est. Nam ut porta purus. Curabitur vel felis placerat, porttitor nibh quis, facilisis mi. Morbi in fermentum nisi, eget iaculis nisl. Praesent posuere non lectus nec vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean blandit lectus et nisl eleifend, ornare ornare sem efficitur. Nullam quis nisl at risus luctus imperdiet. Maecenas aliquam est a nulla fermentum convallis.</p>
+  <h4 id="H4082896">Ordered list</h4>
+  <ol id="L44668941">
+    <li>
+      <p>List item 1</p>
+    </li>
+    <li>
+      <p>List item 2</p>
+    </li>
+    <li>
+      <p>List item 3</p>
+    </li>
+  </ol>
+  <h4 id="H4354781">Ordered list indented</h4>
+  <ol id="L62758611">
+    <li>
+      <p>Item 1</p>
+      <ol id="L56905051">
+        <li>
+          <p>Item 2a</p>
+        </li>
+        <li>
+          <p>Item 2b</p>
+        </li>
+        <li>
+          <p>Item 2c</p>
+          <ol id="L45477331">
+            <li>
+              <p>Sub list 1</p>
+            </li>
+            <li>
+              <p>Sub list 2</p>
+            </li>
+            <li>
+              <p>Sub lust 3</p>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+  <p>Proin semper interdum rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent convallis hendrerit semper. Fusce consectetur elit non ipsum egestas, sed bibendum tellus euismod. Ut viverra massa vel magna tempor imperdiet id et enim. Integer rhoncus eleifend facilisis. Nunc laoreet sodales mauris, sit amet fermentum ex tempus egestas. Fusce est est, vestibulum et commodo vel, malesuada id dui. Aliquam erat volutpat. Fusce mattis id nunc eget pharetra. Aenean vitae viverra dolor. Donec lacinia eget ante quis facilisis. Quisque justo lacus, dignissim in erat vel, eleifend semper quam. Etiam pretium nisl sit amet est auctor, in euismod ipsum volutpat.</p>
+  <h3 id="H1193054">Unordered list</h3>
+  <ul id="L53902401">
+    <li>
+      <p>Item 1</p>
+    </li>
+    <li>
+      <p>Item 2</p>
+    </li>
+    <li>
+      <p>Item 3</p>
+    </li>
+    <li>
+      <p>Item 4</p>
+    </li>
+    <li>
+      <p>Item 5</p>
+    </li>
+  </ul>
+  <h3 id="H2723379">Headers and styles</h3>
+  <p>Aliquam condimentum velit sed vestibulum iaculis. Sed neque nunc, sagittis eu semper eget, vehicula a orci. Mauris ultricies diam leo, id scelerisque ante facilisis vel. Curabitur ut ultricies eros. Nam diam sapien, gravida eget cursus non, consequat a elit. Fusce non pulvinar magna, vel dapibus felis. Aliquam sem nisi, efficitur ut maximus vitae, condimentum in lorem.</p>
+  <h1 id="H5078208">Header 1</h1>
+  <h2 id="H7613580">Header 2</h2>
+  <h3 id="H7133996">Header 3</h3>
+  <h4 id="H9722296">Header 4</h4>
+  <h5 id="H7389617">Header 5</h5>
+  <h6 id="H1367103">Header 6</h6>
+  <p>Aliquam erat volutpat. Maecenas iaculis lorem nec elit ornare interdum. Integer faucibus a augue a ullamcorper. Aenean non ligula id nulla faucibus rutrum ut et eros. Aliquam a tempus ex. Vivamus sit amet sapien gravida, pretium quam nec, scelerisque tellus. Donec malesuada augue lorem, quis hendrerit risus luctus vel. Aenean sollicitudin tortor vel ex hendrerit, ac aliquam ipsum aliquet. Sed id velit nec magna fermentum pellentesque. Integer lorem arcu, malesuada eu iaculis id, varius eu tortor. Praesent orci orci, varius efficitur lacinia id, ultrices non diam. Etiam congue, diam id bibendum tincidunt, ante elit lobortis nibh, et bibendum enim velit eu urna. Nam vitae turpis sit amet mauris sagittis mattis. Nullam mattis pulvinar posuere. Quisque tincidunt lacus nibh, id rutrum est tempor a.</p>
+  <h3 id="H7176378">Blockquote</h3>
+  <blockquote>
+    <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla a hendrerit diam. Morbi nec ipsum eget ligula consectetur mollis. Quisque vulputate iaculis elementum. Aliquam pulvinar, quam id pellentesque facilisis, massa lorem accumsan urna, a rhoncus nibh mi ac ex. Donec nec sollicitudin risus. Aenean lectus augue, lobortis id scelerisque sit amet, ultrices quis arcu. Nam et eros gravida, consequat felis eu, lacinia arcu. Nam fermentum convallis risus, ut accumsan nisi viverra eu.</p>
+  </blockquote>
+  <h3 id="H6762577">Bold and italic</h3>
+  <p><strong>Vestibulum mauris odio, pretium eget tellus et</strong>, convallis aliquet quam. Nunc cursus magna velit, in euismod nibh ornare quis. Ut tempor mi id nulla imperdiet semper. <em>Nullam suscipit, nisl at aliquet dictum, ante felis dignissim mauris, ac viverra enim magna convallis erat.</em> Sed rutrum erat in ex accumsan, eget pharetra quam semper. Phasellus mattis sagittis mauris, et faucibus elit egestas et. Nulla ante ante, euismod ut aliquam a, blandit quis sapien. <em><strong>Aliquam ultrices nec lacus quis scelerisque.</strong></em> Duis faucibus odio a nulla ultricies placerat. Proin quis commodo turpis. Aliquam consequat tellus faucibus egestas malesuada. Proin lectus libero, mollis a bibendum in, tristique sed sem. Aliquam convallis dignissim urna, at facilisis massa iaculis sit amet. In non ex in lacus pellentesque egestas sed ac felis. Etiam sit amet nisi sit amet mi sagittis auctor a et libero.</p>
+  <h3 id="H8807675">Horizontal line</h3>
+  <hr>
+  <p>Fusce ac odio non libero ultricies lobortis. Quisque congue risus id turpis rhoncus, sit amet ultricies nisi suscipit. Vestibulum a neque erat. Sed quam mi, tempor ut tellus nec, placerat fermentum metus. Sed quis blandit nibh, blandit luctus dui. Donec venenatis consectetur ipsum et volutpat. Pellentesque semper odio nec fringilla consequat. Ut porta ex at dolor malesuada, sit amet placerat lorem fringilla. Mauris nec consectetur est. Nulla facilisi. Donec vehicula, mauris eu porttitor venenatis, nunc magna molestie odio, id dapibus orci lectus quis lorem. Curabitur blandit ac velit vel gravida.</p>
+  <p>Donec ligula purus, congue vel vulputate et, bibendum a leo. Mauris fringilla arcu ac felis ornare fringilla ac eu diam. Morbi feugiat fermentum nulla in sollicitudin. Integer vehicula libero facilisis, volutpat orci at, sodales nunc. Vestibulum eleifend, diam sed tempor aliquam, sem metus faucibus nibh, facilisis fringilla tellus risus id quam. Donec efficitur turpis tellus, eget venenatis lacus volutpat at. Nunc vel lorem vel massa finibus egestas. Maecenas ut lobortis purus.</p>
+</div>
+<section class="fnlist" role="doc-footnotes"></section><h1 class="part">Back Matter</h1>
+<div class="article-part article-title" id="_5_0">Appendix</div>
+<div class="article-part article-richtext article-body">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus placerat risus, ut sagittis magna. Aliquam vehicula lacinia nisi, rutrum condimentum lacus mattis tincidunt. Quisque ullamcorper orci quis sem tempus suscipit. Etiam et semper eros, a eleifend risus. Vestibulum convallis orci purus, et feugiat ipsum facilisis rutrum. Nullam justo lorem, fermentum ultrices lorem sed, faucibus imperdiet est. Nam ut porta purus. Curabitur vel felis placerat, porttitor nibh quis, facilisis mi. Morbi in fermentum nisi, eget iaculis nisl. Praesent posuere non lectus nec vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean blandit lectus et nisl eleifend, ornare ornare sem efficitur. Nullam quis nisl at risus luctus imperdiet. Maecenas aliquam est a nulla fermentum convallis.</p>
+  <p>Proin semper interdum rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent convallis hendrerit semper. Fusce consectetur elit non ipsum egestas, sed bibendum tellus euismod. Ut viverra massa vel magna tempor imperdiet id et enim. Integer rhoncus eleifend facilisis. Nunc laoreet sodales mauris, sit amet fermentum ex tempus egestas. Fusce est est, vestibulum et commodo vel, malesuada id dui. Aliquam erat volutpat. Fusce mattis id nunc eget pharetra. Aenean vitae viverra dolor. Donec lacinia eget ante quis facilisis. Quisque justo lacus, dignissim in erat vel, eleifend semper quam. Etiam pretium nisl sit amet est auctor, in euismod ipsum volutpat.</p>
+  <p>Aliquam condimentum velit sed vestibulum iaculis. Sed neque nunc, sagittis eu semper eget, vehicula a orci. Mauris ultricies diam leo, id scelerisque ante facilisis vel. Curabitur ut ultricies eros. Nam diam sapien, gravida eget cursus non, consequat a elit. Fusce non pulvinar magna, vel dapibus felis. Aliquam sem nisi, efficitur ut maximus vitae, condimentum in lorem.</p>
+  <p>Aliquam erat volutpat. Maecenas iaculis lorem nec elit ornare interdum. Integer faucibus a augue a ullamcorper. Aenean non ligula id nulla faucibus rutrum ut et eros. Aliquam a tempus ex. Vivamus sit amet sapien gravida, pretium quam nec, scelerisque tellus. Donec malesuada augue lorem, quis hendrerit risus luctus vel. Aenean sollicitudin tortor vel ex hendrerit, ac aliquam ipsum aliquet. Sed id velit nec magna fermentum pellentesque. Integer lorem arcu, malesuada eu iaculis id, varius eu tortor. Praesent orci orci, varius efficitur lacinia id, ultrices non diam. Etiam congue, diam id bibendum tincidunt, ante elit lobortis nibh, et bibendum enim velit eu urna. Nam vitae turpis sit amet mauris sagittis mattis. Nullam mattis pulvinar posuere. Quisque tincidunt lacus nibh, id rutrum est tempor a.</p>
+  <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla a hendrerit diam. Morbi nec ipsum eget ligula consectetur mollis. Quisque vulputate iaculis elementum. Aliquam pulvinar, quam id pellentesque facilisis, massa lorem accumsan urna, a rhoncus nibh mi ac ex. Donec nec sollicitudin risus. Aenean lectus augue, lobortis id scelerisque sit amet, ultrices quis arcu. Nam et eros gravida, consequat felis eu, lacinia arcu. Nam fermentum convallis risus, ut accumsan nisi viverra eu.</p>
+  <p>Vestibulum mauris odio, pretium eget tellus et, convallis aliquet quam. Nunc cursus magna velit, in euismod nibh ornare quis. Ut tempor mi id nulla imperdiet semper. Nullam suscipit, nisl at aliquet dictum, ante felis dignissim mauris, ac viverra enim magna convallis erat. Sed rutrum erat in ex accumsan, eget pharetra quam semper. Phasellus mattis sagittis mauris, et faucibus elit egestas et. Nulla ante ante, euismod ut aliquam a, blandit quis sapien. Aliquam ultrices nec lacus quis scelerisque. Duis faucibus odio a nulla ultricies placerat. Proin quis commodo turpis. Aliquam consequat tellus faucibus egestas malesuada. Proin lectus libero, mollis a bibendum in, tristique sed sem. Aliquam convallis dignissim urna, at facilisis massa iaculis sit amet. In non ex in lacus pellentesque egestas sed ac felis. Etiam sit amet nisi sit amet mi sagittis auctor a et libero.</p>
+  <p>Fusce ac odio non libero ultricies lobortis. Quisque congue risus id turpis rhoncus, sit amet ultricies nisi suscipit. Vestibulum a neque erat. Sed quam mi, tempor ut tellus nec, placerat fermentum metus. Sed quis blandit nibh, blandit luctus dui. Donec venenatis consectetur ipsum et volutpat. Pellentesque semper odio nec fringilla consequat. Ut porta ex at dolor malesuada, sit amet placerat lorem fringilla. Mauris nec consectetur est. Nulla facilisi. Donec vehicula, mauris eu porttitor venenatis, nunc magna molestie odio, id dapibus orci lectus quis lorem. Curabitur blandit ac velit vel gravida.</p>
+</div>
+<section class="fnlist" role="doc-footnotes"></section>
+    </body>
+</html>

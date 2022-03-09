@@ -1,0 +1,7 @@
+{
+  "__comment": "Set values to false if no link should be created.",
+  "repoURL": "https://github.com/TIBHannover/ADA-Book-Template/",
+  "repoBranch": "main",
+  "vivlioURL": "https://vivliostyle.vercel.app/",
+  "podURL": "https://doabooks.org/"
+}

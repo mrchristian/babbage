@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=fallback');
+
+:root {
+    --base-font-size                                  : 16px;
+    --base-font-family                                : "Open sans", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif; /*--base-color: var(--mono-shade2);*/
+    --link-color                                      : #000; /*#0A75BD*/
+    --link-color--hover                               : #f39200;
+    --link-border-bottom--hover                       : #f39200;
+    --link-text-decoration                            : underline;
+    --link-text-decoration-color                      : #000;
+    --sidebar-name-color                              : #000;
+    --sidebar-background                              : #C9D5DE;
+    --sidebar-nav-link-color--active                  : #4D4D4D;
+    --cover-heading-font-size-max                     : 40;
+    --cover-heading-font-size-min                     : 34;
+    --blockquote-border-color                         : #f39200;
+    --heading-font-family                             : "IBM Plex Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+    --heading-h1-font-size: 3rem;
+    --heading-h1-font-weight: 800;
+    --heading-h2-font-size: 2rem;/*var(--font-size-xl)*/
+    --heading-h3-border-style: solid;
+    --heading-h3-font-size: 1.6rem; /*var(--font-size-l)*/
+    --heading-h3-font-weight: 500;
+    --heading-h4-border-style: solid;
+    --heading-h4-font-size: 1.3rem; /*var(--font-size-m)*/
+    --heading-h4-font-weight: 500;
+    --heading-h5-font-size: 1.1rem; /*var(--font-size-s)*/
+    --heading-h5-font-weight: 500;
+    --heading-h6-font-size: 0.9rem; /*var(--font-size-xs)*/
+    --sidebar-nav-link-font-weight--active            : bold;
+    --sidebar-border-color                            : rgb(174,182,187);
+    --sidebar-width                                   : 22rem;
+    --sidebar-nav-pagelink-background-position        : 3px 10px;
+    --sidebar-nav-pagelink-background-position--active: 3px 10px; /*left center*/
+    --sidebar-nav-pagelink-background-image           : url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='11.2' viewBox='0 0 7 11.2'%3E%3Cpath d='M1.5 1.5l4 4.1 -4 4.1' stroke-width='1.5' stroke='black' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+    --sidebar-nav-pagelink-background-image--active   : url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.2' height='7' viewBox='0 0 11.2 7'%3E%3Cpath d='M1.5 1.5l4.1 4 4.1-4' stroke-width='1.5' stroke='black' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+    --sidebar-nav-pagelink-background-image--collapse : url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='11.2' viewBox='0 0 7 11.2'%3E%3Cpath d='M1.5 1.5l4 4.1 -4 4.1' stroke-width='1.5' stroke='black' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+    --sidebar-nav-pagelink-background-image--loaded   : url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.2' height='7' viewBox='0 0 11.2 7'%3E%3Cpath d='M1.5 1.5l4.1 4 4.1-4' stroke-width='1.5' stroke='black' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+}
+.content .markdown-section nav::before {
+    content: "";
+    /*font-family: "Sora", sans-serif;
+    font-weight: 600;
+    line-height: 1.25em;
+    color: #001949;
+    display: block;
+    height: 0px;*/
+}
+.sidebar-nav li {
+  padding-left: 0.8rem;
+}
+.content .markdown-section table {
+  display: table!important;
+}
+
+.content .markdown-section .booktitle, .content .markdown-section .titlepage {
+  text-align: center;
+}
+.markdown-section h1, .content .markdown-section .article-title {
+    margin: var(--heading-h1-margin, var(--heading-margin));
+    padding: var(--heading-h1-padding, var(--heading-padding));
+    border-width: var(--heading-h1-border-width, 0);
+    border-style: var(--heading-h1-border-style);
+    border-color: var(--heading-h1-border-color);
+    font-family: var(--heading-h1-font-family, var(--heading-font-family));
+    font-size: var(--heading-h1-font-size);
+    font-weight: var(--heading-h1-font-weight, var(--heading-font-weight));
+    line-height: var(--base-line-height);
+    color: var(--heading-h1-color, var(--heading-color));
+    text-align: left;
+}
+
+.content .markdown-section h1.article-bibliography-header {
+    margin: var(--heading-h2-margin, var(--heading-margin));
+    padding: var(--heading-h2-padding, var(--heading-padding));
+    border-width: var(--heading-h2-border-width, 0);
+    border-style: var(--heading-h2-border-style);
+    border-color: var(--heading-h2-border-color);
+    font-family: var(--heading-h2-font-family, var(--heading-font-family));
+    font-size: var(--heading-h2-font-size);
+    font-weight: var(--heading-h2-font-weight, var(--heading-font-weight));
+    line-height: var(--base-line-height);
+    color: var(--heading-h2-color, var(--heading-color));
+} /*.markdown-section h2*/
+
+.content .markdown-section h3.bookauthor {
+      font-size: var(--heading-h4-font-size);
+}
+
+.content .markdown-section p {
+  font-size: var(--base-font-size);
+  font-family: var(--base-font-family);
+  line-height: 1.6rem;
+  letter-spacing: normal;
+  word-spacing: normal;
+  orphans: 0;
+  widows: 0;
+}
+
+.content .markdown-section li p {
+    display: block;
+}
+
+.sidebar-nav  p {
+  font-family: var(--base-font-family);
+}
+
+.ready hr {
+  height: 0;
+  margin: 2em 0;
+  border: none;
+  border-bottom: var(--hr-border, 0);
+}
+
+.content .markdown-section table caption:before {
+  content: "";
+  margin-right: 0em;
+}
+.content .markdown-section table caption {
+   padding-left: 0;
+}
+
+.content .markdown-section .article-body ol {
+  font-size: var(--base-font-size);
+  font-family: var(--base-font-family);
+  line-height: 1.6rem;
+}
+.content .markdown-section a {
+  text-decoration: underline !important;
+  border-bottom: none!important;
+}
+
+.content .markdown-section blockquote:before {
+    content: "";
+}
+
+.content .markdown-section .csl-entry {
+margin-bottom: 0.8rem;
+font-size: var(--base-font-size);
+font-family: var(--base-font-family);
+line-height: 1.5rem;
+}
+main > .content {
+    margin-top: 30px;
+}
+/* Links */
+.markdown-section a:visited {
+  color: #989898;
+}
+.markdown-section a:visited.anchor  {
+color: var(--base-color);
+}
+.markdown-section a.anchor {
+  color:inherit;
+  text-decoration:none}
+.markdown-section a.anchor:hover {color:inherit; text-decoration:underline; }
+.markdown-section a:visited:hover {color:inherit; }
+
+/* Pagination */
+.pagination-item a:visited .pagination-item-title {
+    color: inherit;
+}
+.pagination-item:not(:last-child) a:hover .pagination-item-title, .pagination-item:not(:last-child) a .pagination-item-title, .pagination-item:not(:last-child) a:hover .pagination-item-label, .pagination-item:not(:last-child) a .pagination-item-label {
+  -webkit-transition:none !important;
+  -moz-transition:none !important;
+  -o-transition:none !important;
+  transition:none !important;
+}
+
+/*toc from Fidus*/
+.sidebar-nav #toc ol li {
+ list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  font-size: 0.8rem;
+}
+.sidebar-nav #toc ol li::before {
+  content: '\f107';
+  font: var(--fa-font-solid);
+  line-height: 2;
+  font-weight: 900;
+  float: left;
+  margin-left: -1.5em;
+}
+.sidebar-nav #toc ol ol li::before {
+  content: '';
+  margin-left: 0em;
+}
+.sidebar-nav #toc ol ol li {
+    list-style-type: "- ";
+}
+
+#toc ol li ol li ol {
+  display: none;
+}
+.content .markdown-section .tocpage a {
+  text-decoration: none!important;
+  font-size: 1rem;
+}
+.content .markdown-section .tocpage ol li::before {
+  content: '\f107';
+  font: var(--fa-font-solid);
+  line-height: 1.5;
+  float: left;
+  margin-left: -1.5em;
+}
+.content .markdown-section .tocpage ol ol li::before {
+  content: '';
+  margin-left: 0em;
+}
+
+.content .markdown-section .tocpage ol {
+ list-style-type:none;
+ margin-left: 0;
+
+}
+.content .markdown-section .tocpage nav li ol li ol li ol li {
+  display: none!important;
+}
+
+.content .markdown-section nav li ol ol {
+  display: block !important;
+}
+.sidebar nav ul {
+  padding-left: 0.8rem;
+}
+.content .markdown-section table {
+  margin: 0 auto;
+  width: 99% !important;
+  font-family: "Open Sans", helvetica neue, arial, sans-serif;
+  background-size: 8pt;
+  page-break-inside: avoid;
+  border-collapse: collapse;
+  border-left: 0;
+  border-right: 0;
+  text-align: left;
+  font-size: 8pt;
+}
+
+.content .markdown-section table th {
+  border-left: 0;
+  border-right: 0;
+  padding: 0em 1em;
+  font-size: 12px;
+  color: : black;
+  font-weight: 700;
+  font-style: italic;
+  background-color: rgb(241,248,250);
+  border-bottom: 2px solid #0B87DA;
+}
+.content .markdown-section table caption, .content .markdown-section figure figcaption {
+    font-size: 0.8rem;
+    margin: 0.5em 0 0.75em;
+    text-align: left;
+    font-style: normal;
+    font-weight: 300;
+}
+.content .markdown-section figure {
+    border: none;
+}
+.content .markdown-section figure.aligned-left.image-width-50 {
+  margin-right: 20px;
+}
+/* Footnotes*/
+
+.content .markdown-section section.fnlist {
+  display: block!important;
+  font-size: 0.8rem;
+  margin-top:2rem;
+}
+.content .markdown-section section.fnlist p {
+  font-size: 0.8rem;
+}
+.content .markdown-section  .footnote-counter::before {
+      content: attr(data-book-counter); /* or data-chapter-counter */
+  }
+
+.content .markdown-section  section[role=doc-footnote] .footnote-counter::after {
+      content: '. ';
+  }
+
+  section[role=doc-footnote]:first-of-type::before {
+      content: 'Footnote';
+      display: block;
+      border-bottom: 1px solid black;
+    }
+
+
+/* Table of Contents*/
+section.content > aside.nav > .page_toc {
+  top: 80px !important;
+  font-size: 14px;
+}
+section.content > aside.nav > .page_toc ul a:hover span {
+  color: var(--text-color-tertiary, #EE868F) !important;
+  color: #EE868F !important;
+}
+.nav .page_toc ul a:hover span {
+  color: #EE868F !important;
+}
+aside.nav > .page_toc .active {
+  border-left: 5px solid #0B87DA;
+  color: inherit !important;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+aside.nav > .page_toc li strong {
+  font-weight: normal;
+  color: inherit !important;
+}
+aside.nav > .page_toc .active strong {
+  /*font-weight: bold;*/
+  color: inherit !important;
+}
+
+/* top right menu*/
+nav.app-nav li a:active, nav.app-nav li a:hover {
+    color: #EE868F !important;
+    -webkit-transition:none !important;
+    -moz-transition:none !important;
+    -o-transition:none !important;
+    transition:none !important;
+}
+nav.app-nav li a, nav.app-nav li a:visited {
+    color: inherit;
+}
+
+/* Sidebar */
+.sidebar-nav, .sidebar nav { font-size: 0.9rem; }
+.sidebar-nav a, .sidebar nav a {
+  white-space: normal;
+  display:block;
+  overflow: visible;
+}
+.sidebar-nav a {
+  /*letter-spacing: .1em;*/
+  transition: text-shadow .3s;
+}
+
+.sidebar-nav a:hover, .sidebar-nav a:active {
+    text-shadow: 0 0 .50px #33333370, 0 0 .50px #33333370;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    text-decoration: none!important;
+}
+.sidebar .search input[type="search"]:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.sidebar-nav > p {
+  font-size: 12px;
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0; overflow: hidden;
+  max-width: 100%;
+}
