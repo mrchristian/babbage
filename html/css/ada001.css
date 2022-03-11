@@ -68,7 +68,7 @@
 background-size: 159mm 229mm;
   display: flex;
   margin-top: 300mm;
-  color: #001668 ; 
+  color: #001668 ;
   page-break-after: always;
   @bottom-left { content: normal; }
   @bottom-center { content: normal; }
@@ -79,11 +79,11 @@ background-size: 159mm 229mm;
     content: env(doc-title);
     font-family: "noto sans", helvetica neue, arial, sans-serif;
     font-weight: 600;
-   font-size: 38pt; 
+   font-size: 32pt;
     text-align: center;
     letter-spacing: 0.2pt;
     word-spacing: 1px;
-   margin-top: -240mm;
+   margin-top: -180mm;
   }
 }
 
@@ -154,11 +154,11 @@ background-size: 159mm 229mm;
   @top-right { content: normal; }
 }
 
-#cover { 
+#cover {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden 
+    overflow: hidden
 }
 
 #cover img {
@@ -290,12 +290,8 @@ html {
   font-size: 10.75pt;
   color: black;
   text-rendering: optimizeLegibility;
-  /*-webkit-font-smoothing: antialiased;*/
   overflow-wrap: break-word;
-    word-wrap: break-word;
-    /*-webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;*/
+  word-wrap: break-word;
 }
 
 nav {
@@ -316,6 +312,9 @@ nav li a {
   align-items: baseline;
   border: none;
   font-size: 9pt;
+}
+nav li a:hover {
+  border-bottom: 0px;
 }
 nav li a::before {
   margin-right: 0.5em;
@@ -341,39 +340,39 @@ nav li a::after {
  order: 2;
 }
 
-/*nav {
-  break-before: always;
+/* Section Labels */
+.tocpage nav ol:first-child li a::after {
+  content: "";
 }
-nav li a {
-  display: inline-flex;
-  width: 100%;
-  text-decoration: none;
-  color: currentColor;
-  align-items: baseline;
-  border: none;
+.tocpage nav ol:first-child li > ol li a::after  {
+  content: target-counter(attr(href), page);
+}
+.tocpage nav ol:first-child li a::before  {
+  flex: none;
+}
+
+.tocpage nav ol:first-child li > ol li a::before  {
+  flex: auto !important;
+}
+.titlepage {
+  text-align: center;
+font-family: "noto sans", helvetica neue, arial, sans-serif;
+}
+h1.booktitle {
+  margin-bottom: 10px;
+}
+h2.booksubtitle {
+  margin-top:0;
+  margin-bottom: 50px;
+}
+h3.bookauthor {
   font-size: 9pt;
 }
-nav li a::before {
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  border-bottom: 1px dotted;
-  content: "";
-  order: 1;
- flex: auto;
-}
-nav li a::after {
- text-align: right;
- content: target-counter(attr(href), page);
- align-self: flex-end;
- flex: none;
- order: 2;
-}*/
-
 h1.part { display: none; }
 .article-title {
   font-family: "noto sans", helvetica neue, arial, sans-serif;
-  font-size: 38pt; 
-  color: #001668 ; 
+  font-size: 32pt;
+  color: #001668;
   margin-bottom: 2em;
   margin-top: 2em;
   page-break-inside: avoid;
@@ -397,28 +396,12 @@ h1.part { display: none; }
   margin-bottom: 13pt;
   letter-spacing: 1pt;
 }
-/*Literaturverzeichnis
-.article-bibliography-header {
-  font-family :"noto serif", serif;
-  font-size: 24pt;
-  color: rgb(58,172,196);
-  margin-bottom: 0.5em;
-  margin-top: 2em;
-  page-break-inside: avoid;
-  page-break-after: avoid;
-  text-align: center;
-  text-transform: none;
-  hyphens: manual;
-  white-space: pre-line;
-  letter-spacing: 0pt;
-  word-spacing: 1px;
-}*/
 
 /*Literaturverzeichnis*/
 .article-bibliography-header {
   font-family: "noto sans", helvetica neue, arial, sans-serif;
-  font-size: 24pt; 
-  color: #D20041 ; 
+  font-size: 24pt;
+  color: rgb(25,43,83);
   margin-bottom: 0.5em;
   margin-top: 2em;
   page-break-inside: avoid;
