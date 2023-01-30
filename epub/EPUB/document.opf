@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="fidus" xml:lang="en-GB" prefix="cc: http://creativecommons.org/ns#">
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="fidus" xml:lang="en-US" prefix="cc: http://creativecommons.org/ns#">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:identifier id="fidus">89</dc:identifier>
     <dc:title>On Combinations of Masters Against the Public</dc:title>
     <dc:creator>
       Charles Babbage (June 8, 1832. Dorset Street, Manchester Square, London)
     </dc:creator>
-    <dc:language>en-GB</dc:language>
-    <meta property="dcterms:modified">2022-03-11T09:59:47Z</meta>
-    <dc:date>2022-03-11</dc:date>
+    <dc:language>en-US</dc:language>
+    <meta property="dcterms:modified">2023-01-30T18:23:23Z</meta>
+    <dc:date>2023-01-30</dc:date>
     <dc:rights>Uni Cal Lib. Evidence reported by scanner-ian-white for item oneconomyofmachi00babbrich on January 10, 2007: no visible notice of copyright; stated date is 1846.</dc:rights>
     <dc:publisher>London, J. Murray</dc:publisher>
     <dc:subject>Machinery</dc:subject>
@@ -23,17 +23,25 @@
     <item id="t4" href="document-4.xhtml" media-type="application/xhtml+xml" />
     <item id="nav" href="document-nav.xhtml" properties="nav" media-type="application/xhtml+xml" />
     <item id="copyright" href="copyright.xhtml" media-type="application/xhtml+xml" />
-    <item id="font0" href="css/media/NotoSerif-Italic.ttf" media-type="font/sfnt" />
-    <item id="font1" href="css/media/NotoSerif-BoldItalic.ttf" media-type="font/sfnt" />
-    <item id="font2" href="css/media/NotoSerif-Regular.ttf" media-type="font/sfnt" />
-    <item id="font3" href="css/media/NotoSans-SemiBoldItalic.ttf" media-type="font/sfnt" />
-    <item id="font4" href="css/media/NotoSans-SemiBold.ttf" media-type="font/sfnt" />
-    <item id="font5" href="css/media/NotoSans-Medium.ttf" media-type="font/sfnt" />
-    <item id="font6" href="css/media/NotoSans-Regular.ttf" media-type="font/sfnt" />
-    <item id="font7" href="css/media/NotoSans-Italic.ttf" media-type="font/sfnt" />
-    <item id="font8" href="css/media/NotoSerif-Bold.ttf" media-type="font/sfnt" />
+    <item id="font0" href="css/media/Arsenal-Regular.ttf" media-type="font/sfnt" />
+    <item id="font1" href="css/media/Arsenal-Italic.ttf" media-type="font/sfnt" />
+    <item id="font2" href="css/media/Arsenal-Bold.ttf" media-type="font/sfnt" />
+    <item id="font3" href="css/media/Arsenal-BoldItalic.ttf" media-type="font/sfnt" />
+    <item id="font4" href="css/media/OpenSans-Regular.ttf" media-type="font/sfnt" />
+    <item id="font5" href="css/media/OpenSans-Medium.ttf" media-type="font/sfnt" />
+    <item id="font6" href="css/media/OpenSans-Italic.ttf" media-type="font/sfnt" />
+    <item id="font7" href="css/media/OpenSans-MediumItalic.ttf" media-type="font/sfnt" />
+    <item id="font8" href="css/media/OpenSans-Light.ttf" media-type="font/sfnt" />
+    <item id="font9" href="css/media/OpenSans-SemiBold.ttf" media-type="font/sfnt" />
+    <item id="font10" href="css/media/OpenSans-SemiBoldItalic.ttf" media-type="font/sfnt" />
+    <item id="font11" href="css/media/OpenSans-Bold.ttf" media-type="font/sfnt" />
+    <item id="font12" href="css/media/OpenSans-BoldItalic.ttf" media-type="font/sfnt" />
+    <item id="font13" href="css/media/OpenSans-VariableFont_wdth,wght.ttf" media-type="font/sfnt" />
+    <item id="font14" href="css/media/OpenSans-Italic-VariableFont_wdth,wght.ttf" media-type="font/sfnt" />
+    <item id="font15" href="css/media/Mulish-Italic-VariableFont_wght.ttf" media-type="font/sfnt" />
+    <item id="font16" href="css/media/Mulish-VariableFont_wght.ttf" media-type="font/sfnt" />
     <item id="css0" href="css/document.css" media-type="text/css" />
-    <item id="css1" href="css/ada001.css" media-type="text/css" />
+    <item id="css1" href="css/handbook-001.css" media-type="text/css" />
 
     <!-- ncx included for 2.0 reading system compatibility: -->
     <item id="ncx" href="document.ncx" media-type="application/x-dtbncx+xml" />
